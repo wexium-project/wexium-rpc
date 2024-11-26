@@ -12,7 +12,7 @@ It was designed with compatibility for the following environments:
 
 ## Getting started
 
-Our RPC solution provides out-of-the-box support for [Electron](packages/rpc-node) and [Node.js](packages/rpc-node).
+wexium RPC solution provides out-of-the-box support for [Electron](packages/rpc-node) and [Node.js](packages/rpc-node).
 However, if that's not sufficient, you can use [rpc-core](packages/rpc-core) to implement your own solution for the platform of your choice.
 
 Here's how to communicate with the main process from renderer using [rpc-electron](packages/rpc-electron):
