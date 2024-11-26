@@ -1,0 +1,41 @@
+{
+  "name": "@wexium/rpc-electron",
+  "version": "1.0.0",
+  "description": "Type-safe inter-process communication for Electron",
+  "keywords": [
+    "electron",
+    "typescript",
+    "ipc",
+    "grpc",
+    "main",
+    "renderer"
+  ],
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "homepage": "https://github.com/wexium-project/wexium-rpc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wexium-project/wexium-rpc.git"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build:prod": "npm run clean && tsc",
+    "clean": "rimraf build",
+    "prepublishOnly": "npm run build:prod",
+    "test": "mocha -r ts-node/register tests/**/*.ts --timeout 5000"
+  },
+  "devDependencies": {
+    "@wexium/rpc-core": "file:../rpc-core",
+    "electron": "^33.2.0"
+  },
+  "peerDependencies": {
+    "@wexium/rpc-core": "*",
+    "electron": "^33.2.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

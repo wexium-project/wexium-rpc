@@ -1,0 +1,40 @@
+{
+  "name": "@wexium/rpc",
+  "version": "1.0.0",
+  "description": "Type-safe inter-process communication",
+  "homepage": "https://github.com/wexium-project/wexium-rpc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wexium-project/wexium-rpc.git"
+  },
+  "scripts": {
+    "watch": "lerna run --stream --parallel watch",
+    "build:prod": "lerna run --stream build:prod",
+    "prepublishOnly": "npm run build:prod",
+    "postinstall": "lerna link --force-local && yarn build:prod",
+    "test": "lerna run --stream test"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.0.1",
+    "@types/deasync": "^0.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.0",
+    "@types/sinon": "^17.0.3",
+    "chai": "^5.1.2",
+    "deasync": "^0.1.30",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "lerna": "^8.1.9",
+    "mocha": "^10.8.2",
+    "prettier": "^3.4.0",
+    "rimraf": "^6.0.1",
+    "sinon": "^19.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@4.5.1"
+}

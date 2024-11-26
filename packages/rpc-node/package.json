@@ -1,0 +1,30 @@
+{
+  "name": "@wexium/rpc-node",
+  "version": "1.0.0",
+  "description": "Type-safe communication between message ports from Node.js worker_threads module",
+  "main": "build/index.js",
+  "typings": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "homepage": "https://github.com/wexium-project/wexium-rpc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wexium-project/wexium-rpc.git"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build:prod": "npm run clean && tsc",
+    "clean": "rimraf build",
+    "prepublishOnly": "npm run build:prod"
+  },
+  "devDependencies": {
+    "@wexium/rpc-core": "file:../rpc-core"
+  },
+  "peerDependencies": {
+    "@wexium/rpc-core": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
