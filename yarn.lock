@@ -1145,21 +1145,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wexium/rpc-core@file:../rpc-core::locator=%40wexium%2Frpc-electron%40workspace%3Apackages%2Frpc-electron":
-  version: 1.0.0
-  resolution: "@wexium/rpc-core@file:../rpc-core#../rpc-core::hash=0eae0c&locator=%40wexium%2Frpc-electron%40workspace%3Apackages%2Frpc-electron"
-  checksum: 10c0/8e65adbcbdae8b216a97c06a1334017c53f5782586d70a3d9914f622578a0bc815ca4ddd50a64122f10623b0b8a5ddae2f16a5b1ebca28627bccf13ed4ffc990
-  languageName: node
-  linkType: hard
-
-"@wexium/rpc-core@file:../rpc-core::locator=%40wexium%2Frpc-node%40workspace%3Apackages%2Frpc-node":
-  version: 1.0.0
-  resolution: "@wexium/rpc-core@file:../rpc-core#../rpc-core::hash=0eae0c&locator=%40wexium%2Frpc-node%40workspace%3Apackages%2Frpc-node"
-  checksum: 10c0/8e65adbcbdae8b216a97c06a1334017c53f5782586d70a3d9914f622578a0bc815ca4ddd50a64122f10623b0b8a5ddae2f16a5b1ebca28627bccf13ed4ffc990
-  languageName: node
-  linkType: hard
-
-"@wexium/rpc-core@workspace:packages/rpc-core":
+"@wexium/rpc-core@npm:^1.0.0, @wexium/rpc-core@workspace:packages/rpc-core":
   version: 0.0.0-use.local
   resolution: "@wexium/rpc-core@workspace:packages/rpc-core"
   languageName: unknown
@@ -1169,7 +1155,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wexium/rpc-electron@workspace:packages/rpc-electron"
   dependencies:
-    "@wexium/rpc-core": "file:../rpc-core"
+    "@wexium/rpc-core": "npm:^1.0.0"
     electron: "npm:^33.2.0"
   peerDependencies:
     "@wexium/rpc-core": "*"
@@ -1181,9 +1167,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@wexium/rpc-node@workspace:packages/rpc-node"
   dependencies:
-    "@wexium/rpc-core": "file:../rpc-core"
+    "@wexium/rpc-core": "npm:^1.0.0"
   peerDependencies:
-    "@wexium/rpc-core": "*"
+    "@wexium/rpc-core": ^1.0.0
   languageName: unknown
   linkType: soft
 
